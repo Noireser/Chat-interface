@@ -104,7 +104,7 @@ function App() {
         <div className="upperSide">
           <div className="upperSideTop">
             <img src={gptlogo} alt="logo" className="logo" />
-            <span className="brand">ChatGpt</span>
+            <span className="brand">Chat Interface</span>
           </div>
           <button className="midBtn" onClick={handleNewChat}>
             <img src={addBtn} alt="new chat" className="addBtn" />
