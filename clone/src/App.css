@@ -1,0 +1,269 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(3, 0, 31);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Login Page Styles */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(3, 0, 31); /* Same background as chat interface */
+}
+
+.login-box {
+  background-color: #1c1e3a;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Same font as chat interface */
+}
+
+.login-box h2 {
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  color: white; /* Same text color */
+}
+
+.login-box input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #333; /* Input field background */
+  color: white; /* Input text color */
+}
+
+.login-box button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  background-color: #5a4bff; /* Same button color as chat interface */
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+/* Main App Container */
+.App {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar Styling */
+.sideBar {
+  flex: 3;
+  max-width: 25%;
+  border-right: 1px solid rgb(100, 100, 100);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Scrollable chat history with hidden scrollbar */
+.chatHistory {
+  max-height: 50vh;
+  overflow-y: auto;
+  padding-right: 5px;
+  scrollbar-width: none;
+}
+
+.chatHistory::-webkit-scrollbar {
+  display: none;
+}
+
+/* Main Content Area */
+.main {
+  flex: 9;
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+.brand {
+  font-size: 2rem;
+}
+
+.upperSide {
+  padding: 1.5rem;
+  height: 70%;
+  margin-bottom: 0.2rem;
+}
+
+.upperSideTop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.addBtn {
+  height: 2rem;
+  padding-right: 1rem;
+}
+
+.midBtn {
+  background: #5a4bff;
+  border: none;
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+}
+
+.query {
+  display: flex;
+  align-items: center;
+  color: rgba(222, 222, 222, 1);
+  background: transparent;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  width: 25rem;
+  border: 1px solid rgba(98, 98, 98, 1);
+}
+
+.query > img {
+  margin-right: 2rem;
+  object-fit: cover;
+  height: 1.75rem;
+}
+
+.LowerSide {
+  padding: 2rem;
+  border-top: 1px solid rgb(100, 100, 100);
+  margin-top: 1rem;
+}
+
+.listItems,
+.listItems2,
+.listItems3 {
+  margin: 0.75rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.listItemsImg {
+  margin: 1rem;
+  padding-right: 0.4rem;
+}
+
+.listItemsImg2 {
+  margin: 1rem;
+  padding-right: 0.8rem;
+}
+
+.listItemsImg3 {
+  margin: 1rem;
+  padding-right: 0.5rem;
+}
+
+/* Main Content Container */
+.Main {
+  flex: 9;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem 10rem;
+}
+
+/* Chat Container */
+.chats {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  width: 868px;
+  height: calc(100vh - 17rem);
+  text-align: justify;
+  scrollbar-width: none;
+}
+
+.chats::-webkit-scrollbar {
+  display: none;
+}
+
+/* Chat Message Styling */
+.chat {
+  margin: 1rem;
+  padding: 2rem 3rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.bot {
+  background-color: rgba(28, 30, 58, 1);
+  width: 68rem;
+}
+
+.userIcon {
+  object-fit: cover;
+  width: 3.5rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+}
+
+.gptImgLogo {
+  object-fit: cover;
+  width: 3.5rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+}
+
+/* Input Container Styling */
+.input-container {
+  display: flex;
+  padding: 10px;
+  background: transparent;
+  position: fixed;
+  bottom: 0;
+  left: 25%;
+  right: 0;
+  z-index: 1;
+  width: calc(100% - 25%);
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid rgba(98, 98, 98, 1);
+  border-radius: 4px 0 0 4px;
+  background-color: rgba(28, 30, 58, 1);
+  color: white;
+}
+
+.input-container button {
+  padding: 10px;
+  background-color: rgba(28, 30, 58, 1);
+  border: 1px solid rgba(98, 98, 98, 1);
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
